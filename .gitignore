@@ -17,3 +17,8 @@ venv/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Lab 05 build outputs
+node_modules/
+out/
+*.tgz
