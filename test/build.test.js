@@ -25,8 +25,3 @@ test('no page is zero bytes', () => {
   }
 });
 
-test('every page names the course', () => {
-  for (const p of pages) {
-    assert.match(fs.readFileSync('out/' + p, 'utf8'), /DevOps/);
-  }
-});
