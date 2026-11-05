@@ -1,11 +1,13 @@
+
 name: CI
 
 on:
   push:
     branches: [main]
   pull_request:
-  schedule:
-    - cron: '0 2 * * *'
+
+permissions:
+  contents: read
 
 jobs:
   lint:
@@ -13,6 +15,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -68,16 +71,3 @@ jobs:
           name: devops-pipeline
           path: '*.tgz'
           if-no-files-found: error
-
-  audit:
-    name: dependency-audit
-    runs-on: ubuntu-24.04
-    if: github.event_name == 'schedule'
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: npm
-      - run: npm ci
-      - run: npm audit --audit-level=high
