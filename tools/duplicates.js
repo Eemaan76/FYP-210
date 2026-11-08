@@ -6,4 +6,11 @@ function isDuplicate(pageA, pageB) {
   return pageA.title === pageB.title;
 }
 
-module.exports = { isDuplicate };
+function hasSameOwner(pageA, pageB) {
+  if (!pageA || !pageB) {
+    return false;
+  }
+  return pageA.ownerId === pageB.ownerId;
+}
+
+module.exports = { isDuplicate, hasSameOwner };
