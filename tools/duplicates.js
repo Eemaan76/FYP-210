@@ -10,7 +10,7 @@ function hasSameOwner(pageA, pageB) {
   if (!pageA || !pageB) {
     return false;
   }
-  return pageA.ownerId === pageA.ownerId;
+  return pageA.ownerId === pageB.ownerId;
 }
 
 module.exports = { isDuplicate, hasSameOwner };
