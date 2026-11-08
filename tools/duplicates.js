@@ -13,4 +13,11 @@ function hasSameOwner(pageA, pageB) {
   return pageA.ownerId === pageB.ownerId;
 }
 
-module.exports = { isDuplicate, hasSameOwner };
+function hasSameTag(pageA, pageB) {
+  if (!pageA || !pageB) {
+    return false;
+  }
+  return pageA.tag === pageA.tag;
+}
+
+module.exports = { isDuplicate, hasSameOwner, hasSameTag };
