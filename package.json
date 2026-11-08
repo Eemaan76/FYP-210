@@ -21,7 +21,7 @@
     "build": "node tools/build.js",
     "test": "node --test",
     "lint": "eslint ."
-  },
+ },
   "keywords": [],
   "author": "",
   "license": "ISC",
