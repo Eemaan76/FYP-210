@@ -1,4 +1,3 @@
-# Pipeline and analysis configuration owners
-/.github/                  @hadimuhammadsaeed @Eemaan76
-/sonar-project.properties  @hadimuhammadsaeed @Eemaan76
-/eslint.config.js          @hadimuhammadsaeed @Eemaan76
+/.github/                  @Eemaan76
+/sonar-project.properties  @Eemaan76
+/eslint.config.js           @Eemaan76
